@@ -18,7 +18,7 @@ if(!exists("mergeNEISCC")){
 library(ggplot2)
 
 coal  <- grepl("coal", mergeNEISCC$Short.Name, ignore.case=TRUE)
-coal2 <- mergeNEISCC[coalMatches, ]
+coal2 <- mergeNEISCC[coal, ]
 
 totalEmissionYear <- aggregate(Emissions ~ year, coal2, sum)
 
